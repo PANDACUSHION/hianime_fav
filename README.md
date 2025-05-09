@@ -8,7 +8,7 @@ install extension : (TamperMonkey)
 [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
 & other Search Engine
 
-[!tamperMonkey](https://postimg.cc/S2RznsYg)
+[!tamperMonkey]([https://postimg.cc/S2RznsYg](https://i.postimg.cc/ZRFPDvbz/image.png))
 Click on the Add button
 
 [Copy this JS File](hianime%20favorite.user.js)
