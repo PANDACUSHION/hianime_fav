@@ -6,8 +6,9 @@
 
   *Easily save and manage your favorite anime on HiAnime*
   
-  [![GitHub stars](https://img.shields.io/badge/Stars-Add%20Star-yellow)](https://github.com/PANDACUSHION/hianime_fav)
-  [![Version](https://img.shields.io/badge/Version-1.0.0-blue)](https://github.com/PANDACUSHION/hianime_fav/releases)
+  [![GitHub stars](https://img.shields.io/badge/Stars-Add%20Star-yellow)](https://github.com/yourusername/hianime-favorites)
+  [![Version](https://img.shields.io/badge/Version-1.0.0-blue)](https://github.com/yourusername/hianime-favorites/releases)
+  [![License](https://img.shields.io/badge/License-MIT-green)](https://github.com/yourusername/hianime-favorites/blob/main/LICENSE)
   
 </div>
 
@@ -61,7 +62,14 @@ Choose your browser below and click the link to install TamperMonkey:
 
 <div align="center">
   
-  *Coming soon*
+  ### Star Feature
+  ![Star Feature](https://i.postimg.cc/63n7Mkh7/image.png)
+  
+  ### Adding to Favorites
+  ![Adding to Favorites](https://i.postimg.cc/dVNT3m10/image.png)
+  
+  ### Favorites on Homescreen
+  ![Favorites on Homescreen](https://i.postimg.cc/CLVCpNBT/image.png)
   
 </div>
 
@@ -92,6 +100,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
   
   Made with ❤️ for anime fans
   
-  [Report an Issue](https://github.com/PANDACUSHION/hianime_fav/issues) | [Request a Feature](https://github.com/PANDACUSHION/hianime_fav/issues)
+  [Report an Issue](https://github.com/yourusername/hianime-favorites/issues) | [Request a Feature](https://github.com/yourusername/hianime-favorites/issues)
   
 </div>
