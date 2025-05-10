@@ -13,43 +13,45 @@
     'use strict';
 
     // Get anime information from the current page
-    function watch_favorites(){
-        const containerFav = document.getElementById('widget-continue-watching');
-        if (!containerFav) return;
-
-        try {
-            const favorites = JSON.parse(localStorage.getItem('hianimefav') || '[]');
-            console.log("Loaded favorites:", favorites);
-
-            if (favorites.length > 0) {
-                // Create a row div to hold the anime cards
-                const rowDiv = document.createElement('div');
-                rowDiv.className = 'block_area-content block_area-list film_list film_list-grid';
-
-                // Create film list div
-                const filmListDiv = document.createElement('div');
-                filmListDiv.className = 'film_list-wrap';
-
-                // Add header for favorites section
-                const headerDiv = document.createElement('div');
-                headerDiv.className = 'block_area-header';
-                headerDiv.innerHTML = '<div class="cat-heading"><h2 class="cat-heading-title">My Favorites</h2></div>';
-                containerFav.appendChild(headerDiv);
-
-                favorites.forEach(animeData => {
-                    if (animeData && animeData.film_poster) {
-                        const card = createAnimeCard(animeData);
-                        filmListDiv.appendChild(card);
-                    }
-                });
-
-                rowDiv.appendChild(filmListDiv);
-                containerFav.appendChild(rowDiv);
+function watch_favorites() {
+    const containerFav = document.getElementById('widget-continue-watching');
+    if (!containerFav) return;
+    try {
+        const favorites = JSON.parse(localStorage.getItem('hianimefav') || '[]');
+        console.log("Loaded favorites:", favorites);
+        if (favorites.length > 0) {
+            const headerDiv = document.createElement('div');
+            headerDiv.className = 'block_area-header';
+            headerDiv.innerHTML = '<div class="cat-heading"><h2 class="cat-heading-title favorites-title">My Favorites</h2></div>';
+            containerFav.appendChild(headerDiv);
+            const favoritesTitle = headerDiv.querySelector('.favorites-title');
+            if (favoritesTitle) {
+                favoritesTitle.style.fontSize = '22px';
+                favoritesTitle.style.lineHeight = '1.3';
+                favoritesTitle.style.fontWeight = '600';
+                favoritesTitle.style.padding = '0';
+                favoritesTitle.style.marginBottom = '20px';
+                favoritesTitle.style.color = '#ffbade';
             }
-        } catch (e) {
-            console.error('Error loading favorites:', e);
+            // Create a row div to hold the anime cards
+            const rowDiv = document.createElement('div');
+            rowDiv.className = 'block_area-content block_area-list film_list film_list-grid';
+            // Create film list div
+            const filmListDiv = document.createElement('div');
+            filmListDiv.className = 'film_list-wrap';
+            favorites.forEach(animeData => {
+                if (animeData && animeData.film_poster) {
+                    const card = createAnimeCard(animeData);
+                    filmListDiv.appendChild(card);
+                }
+            });
+            rowDiv.appendChild(filmListDiv);
+            containerFav.appendChild(rowDiv);
         }
+    } catch (e) {
+        console.error('Error loading favorites:', e);
     }
+}
 
     // Only run watch_favorites on the home page
     if (window.location.href.includes('/home')) {
